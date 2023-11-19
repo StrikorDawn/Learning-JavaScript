@@ -16,11 +16,11 @@ function addNumbers()
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
 /* Function Expression - Subtract Numbers */
-function subtract (number1, number2)
+const subtract = function (number1, number2)
 {
     return number1 - number2;
 }
-function subtractNumbers ()
+const subtractNumbers = function()
 {
     let subtract1 = Number(document.querySelector('#subtract1').value);
     let subtract2 = Number(document.querySelector('#subtract2').value);
@@ -29,11 +29,9 @@ function subtractNumbers ()
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-function multiply (factor1, factor2)
-{
-    return factor1 * factor2;
-}
-function multiplyNumbers ()
+const multiply = (factor1, factor2) => factor1 * factor2;
+
+const multiplyNumbers = () =>
 {
     let num1 = Number(document.querySelector('#factor1').value);
     let num2 = Number(document.querySelector('#factor2').value);
@@ -42,10 +40,8 @@ function multiplyNumbers ()
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
-function divide (dividend, divisor)
-{
-    return dividend / divisor;
-}
+const divide = (dividend, divisor) => dividend / divisor;
+
 function divideNumbers ()
 {
     let num1 = Number(document.querySelector('#dividend').value);
@@ -53,18 +49,29 @@ function divideNumbers ()
     document.querySelector('#quotient').value = divide(num1, num2);
 }
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
-/* Decision Structure */
 
+/* Decision Structure */
+const getTotal = function()
+{
+    let subtotal = Number(document.querySelector('#subtotal').value);
+    if (document.getElementById("member").checked) {    
+        subtotal *= .85
+    }
+document.querySelector("#total").textContent = `$ ${subtotal.toFixed(2)}`;
+}
+document.querySelector('#getTotal').addEventListener('click', getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.querySelector('#array').textContent = numbersArray;
 /* Output Odds Only Array */
-
+document.querySelector('#odds').textContent = numbersArray.filter(num => num % 2);
 /* Output Evens Only Array */
-
+document.querySelector('#evens').textContent = numbersArray.filter(num => num % 2 === 0);
 /* Output Sum of Org. Array */
-
+document.querySelector('#sumOfArray').textContent = numbersArray.reduce((sum, number) => sum + number);
 /* Output Multiplied by 2 Array */
-
+document.querySelector('#multiplied').textContent = numbersArray.map(number => number * 2);
 /* Output Sum of Multiplied by 2 Array */
+document.querySelector('#sumOfMultiplied').textContent = numbersArray.reduce((sum, numbers = map(number => number * 2)) => sum + numbers);
