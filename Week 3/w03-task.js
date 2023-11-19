@@ -2,15 +2,16 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-function add (number1, number2)
+function add(number1, number2)
 {
     return number1 + number2;
 }
-function addNumbers ()
+function addNumbers()
 {
-    let addNumber1 = Number(document.querySelector('#add1').value);
-    let addNumber2 = Number(document.querySelector('#add2').value);
-    document.querySelector('#sum').value = add(addNumber1, addNumber2);
+    let num1 = Number(document.getElementById('add1').value);
+    let num2 = Number(document.getElementById('add2').value);
+    const sum = add(num1, num2);
+    document.getElementById('sum').value = sum;
 }
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
@@ -28,31 +29,30 @@ function subtractNumbers ()
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-function add (factor1, factor2)
+function multiply (factor1, factor2)
 {
-    return number1 + number2;
+    return factor1 * factor2;
 }
-function addNumbers ()
+function multiplyNumbers ()
 {
-    let addNumber1 = Number(document.querySelector('#add1').value);
-    let addNumber2 = Number(document.querySelector('#add2').value);
-    document.querySelector('#sum').value = add(addNumber1, addNumber2);
+    let num1 = Number(document.querySelector('#factor1').value);
+    let num2 = Number(document.querySelector('#factor2').value);
+    document.querySelector('#product').value = multiply(num1, num2);
 }
-document.querySelector('#addNumbers').addEventListener('click', addNumbers);
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
-function add (number1, number2)
+function divide (dividend, divisor)
 {
-    return number1 + number2;
+    return dividend / divisor;
 }
-function addNumbers ()
+function divideNumbers ()
 {
-    let addNumber1 = Number(document.querySelector('#add1').value);
-    let addNumber2 = Number(document.querySelector('#add2').value);
-    document.querySelector('#sum').value = add(addNumber1, addNumber2);
+    let num1 = Number(document.querySelector('#dividend').value);
+    let num2 = Number(document.querySelector('#divisor').value);
+    document.querySelector('#quotient').value = divide(num1, num2);
 }
-document.querySelector('#addNumbers').addEventListener('click', addNumbers);
-
+document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 /* Decision Structure */
 
 
