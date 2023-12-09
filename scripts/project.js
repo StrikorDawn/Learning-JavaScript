@@ -49,7 +49,7 @@ buttonElement.addEventListener('click', ()=> {
       const selectedCard = nameCards[Math.floor(Math.random() * nameCards.length)];
       alert(`Selected Prayer: ${selectedCard.textContent}`);
       animationInProgress = false;
-    }, animationDuration);
+    }, animationDuration);  
   }
 });
   
