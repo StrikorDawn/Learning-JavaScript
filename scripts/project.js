@@ -1,5 +1,6 @@
 const namesElement = document.querySelector("#nameGrid");
 const buttonElement = document.querySelector('#pickButton');
+let animationInProgress = false;
 let nameList = [];
 
 const displayNames = (names) => {
